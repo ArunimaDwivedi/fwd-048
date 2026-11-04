@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lost and Found</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <!-- Top part with the name and menu -->
+    <div class="top">
+        <h2 class="logo">Lost and Found</h2>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="#found">Found Items</a>
+            <a href="#report">Report an Item</a>
+            <a href="#rules">Instructions</a>
+        </div>
+    </div>
+
+    <!-- Welcome part -->
+    <div class="welcome">
+        <h1>Welcome to the Lost and Found!</h1>
+        <p>Lost something? Found something? You are in the right place.<br>
+        Look for your lost things here or tell us about things you found.</p>
+
+        <!-- Search box design only,searching needs JavaScript -->
+        <form class="search-area" action="#found" method="get">
+            <input type="text" name="search" placeholder="Search for an item...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Recently found items -->
+    <div class="box" id="found">
+        <h2>Recently Found Items</h2>
+
+        <div class="items">
+            <div class="item">
+                <p class="pic">🎒</p>
+                <h3>Blue Backpack</h3>
+                <p>Found in the library</p>
+                <p class="date">Oct 6</p>
+                <p class="status found-status">Found</p>
+            </div>
+
+            <div class="item">
+                <p class="pic">🔑</p>
+                <h3>Keys</h3>
+                <p>Found near the gate</p>
+                <p class="date">Oct 5</p>
+                <p class="status found-status">Found</p>
+            </div>
+
+            <div class="item">
+                <p class="pic">📱</p>
+                <h3>Black Phone</h3>
+                <p>Found in the cafeteria</p>
+                <p class="date">Oct 5</p>
+                <p class="status found-status">Found</p>
+            </div>
+
+            <div class="item">
+                <p class="pic">👓</p>
+                <h3>Glasses</h3>
+                <p>Found in room 204</p>
+                <p class="date">Oct 3</p>
+                <p class="status found-status">Found</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Report form: fields are shown, but no data is saved without JavaScript or a backend -->
+    <div class="box report-box" id="report">
+        <h2>Report a Lost or Found Item</h2>
+        <p>Fill in the details below.</p>
+
+        <form action="#" method="get">
+            <label for="itemName">Item name:</label>
+            <input type="text" id="itemName" name="itemName" placeholder="Example: Water bottle" required>
+
+            <label for="itemLocation">Location:</label>
+            <input type="text" id="itemLocation" name="itemLocation" placeholder="Where was it lost or found?" required>
+
+            <label for="itemDate">Date:</label>
+            <input type="date" id="itemDate" name="itemDate" required>
+
+            <label for="itemStatus">Report type:</label>
+            <select id="itemStatus" name="itemStatus">
+                <option value="Lost">Lost</option>
+                <option value="Found">Found</option>
+            </select>
+
+            <button type="submit">Submit Report</button>
+        </form>
+    </div>
+
+    <!-- Important instructions -->
+    <div class="box rules" id="rules">
+        <h2>Important Instructions</h2>
+        <ul>
+            <li>Tell us what your item looks like (color, size, brand).</li>
+            <li>Bring an ID when you come to pick up your item.</li>
+            <li>If you find something, please report it quickly.</li>
+            <li>Items not taken in 30 days may be given away.</li>
+        </ul>
+    </div>
+
 </body>
 </html>
