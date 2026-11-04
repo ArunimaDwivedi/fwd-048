@@ -1,0 +1,176 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #222;
+}
+
+.top {
+    background-color: #183b56;
+    color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin: 5px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.welcome {
+    background-color: #dcecf7;
+    text-align: center;
+    padding: 45px 15px;
+}
+
+.welcome h1 {
+    color: #183b56;
+}
+
+.search-area {
+    margin-top: 22px;
+}
+
+input, select {
+    padding: 11px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+button {
+    background-color: #1877a8;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #105879;
+}
+
+.box {
+    background-color: white;
+    margin: 25px auto;
+    padding: 25px;
+    width: 85%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #d5dce2;
+}
+
+.box h2 {
+    color: #183b56;
+    text-align: center;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.item {
+    background-color: #f7f9fb;
+    border: 1px solid #dce2e7;
+    border-radius: 8px;
+    width: 210px;
+    padding: 15px;
+    text-align: center;
+}
+
+.item h3 {
+    color: #183b56;
+}
+
+.pic {
+    font-size: 35px;
+    margin: 5px;
+}
+
+.date {
+    color: #687782;
+    font-size: 13px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+}
+
+.found-status {
+    background-color: #d9f2df;
+    color: #17652c;
+}
+
+.lost-status {
+    background-color: #ffe2df;
+    color: #a52b20;
+}
+
+.report-box {
+    max-width: 650px;
+}
+
+.report-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.report-box label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.report-box button {
+    margin-top: 15px;
+}
+
+.rules {
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .top {
+        flex-direction: column;
+    }
+
+    .menu {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .menu a {
+        display: inline-block;
+    }
+
+    .box {
+        width: 94%;
+    }
+}
