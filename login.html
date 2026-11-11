@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Lost and Found</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>Lost and Found</h1>
+        <p class="sub">Please log in or create an account.</p>
+
+        <!-- Two buttons to switch the form -->
+        <div class="switch">
+            <button type="button" id="loginTab" class="active" onclick="showLogin()">Login</button>
+            <button type="button" id="signupTab" onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <!-- Login form -->
+        <form id="loginForm" onsubmit="return checkLogin()">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" placeholder="you@example.com">
+
+            <label for="loginPhone">Phone number</label>
+            <input type="text" id="loginPhone" placeholder="10 digit number">
+
+            <button type="submit" class="submit">Login</button>
+        </form>
+
+        <!-- Signup form (hidden at start) -->
+        <form id="signupForm" class="hidden" onsubmit="return checkSignup()">
+            <label for="signName">Full name</label>
+            <input type="text" id="signName" placeholder="Your name">
+
+            <label for="signEmail">Email</label>
+            <input type="email" id="signEmail" placeholder="you@example.com">
+
+            <label for="signPhone">Phone number</label>
+            <input type="text" id="signPhone" placeholder="10 digit number">
+
+            <button type="submit" class="submit">Create Account</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+    <script>
+// Show the login form
+function showLogin() {
+    document.getElementById("loginForm").className = "";
+    document.getElementById("signupForm").className = "hidden";
+    document.getElementById("loginTab").className = "active";
+    document.getElementById("signupTab").className = "";
+    document.getElementById("message").innerHTML = "";
+}
+
+// Show the signup form
+function showSignup() {
+    document.getElementById("signupForm").className = "";
+    document.getElementById("loginForm").className = "hidden";
+    document.getElementById("signupTab").className = "active";
+    document.getElementById("loginTab").className = "";
+    document.getElementById("message").innerHTML = "";
+}
+
+// Check the login form
+function checkLogin() {
+    var email = document.getElementById("loginEmail").value;
+    var phone = document.getElementById("loginPhone").value;
+    var message = document.getElementById("message");
+
+    if (email == "" || phone == "") {
+        message.innerHTML = "Please fill in all the fields.";
+        return false;
+    }
+
+    if (phone.length != 10 || isNaN(phone)) {
+        message.innerHTML = "Phone number must be 10 digits.";
+        return false;
+    }
+
+    // Everything is fine, go to the dashboard
+    window.location.href = "index(4).html";
+    return false;
+}
+
+// Check the signup form
+function checkSignup() {
+    var name = document.getElementById("signName").value;
+    var email = document.getElementById("signEmail").value;
+    var phone = document.getElementById("signPhone").value;
+    var message = document.getElementById("message");
+
+    if (name == "" || email == "" || phone == "") {
+        message.innerHTML = "Please fill in all the fields.";
+        return false;
+    }
+
+    if (phone.length != 10 || isNaN(phone)) {
+        message.innerHTML = "Phone number must be 10 digits.";
+        return false;
+    }
+
+    // Everything is fine, go to the dashboard
+    window.location.href = "index(4).html";
+    return false;
+}
+</script>
+</body>
+</html>

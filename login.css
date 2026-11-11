@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #dcecf7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #b9c6d1;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: #183b56;
+}
+
+.sub {
+    text-align: center;
+    color: #687782;
+    margin: 8px 0 20px;
+}
+
+/* Login / Sign Up switch */
+.switch {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.switch button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #1877a8;
+    background-color: white;
+    color: #1877a8;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.switch button.active {
+    background-color: #1877a8;
+    color: white;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 2px solid #1877a8;
+}
+
+.submit {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #1877a8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #105879;
+}
+
+#message {
+    color: #c0392b;
+    text-align: center;
+    margin: 12px 0 0;
+    min-height: 20px;
+}
